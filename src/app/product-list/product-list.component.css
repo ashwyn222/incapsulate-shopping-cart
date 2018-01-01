@@ -1,0 +1,14 @@
+div.products-section{height:600px;border:1px solid #000;border-top:0;overflow:auto;margin-top:40px}
+
+.product-row{margin:20px;text-align:center;border-bottom:1px solid #000}
+.product-section{display:inline-block;margin-right:20px}
+.product-section:last-child{margin-right:0}
+.image-section{width:250px;height:250px}
+.image-section img{width:100%;height:100%}
+.product-title{padding:10px 0;border-top:1px solid #000}
+.product-title div{display:inline-block}
+.product-name{width:120px;text-align:left}
+.add-to-cart{width:120px;text-align:right}
+.add-to-cart a{color:blue;font-size:11px;vertical-align:2px}
+.add-to-cart a:hover{text-decoration:none}
+

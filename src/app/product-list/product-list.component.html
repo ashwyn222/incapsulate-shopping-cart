@@ -1,0 +1,17 @@
+<div class="products-section" (scroll)="onScroll($event)">
+
+  <div class="product-row" *ngFor="let productRow of productData">
+    <div class="product-section" *ngFor="let product of productRow">
+      <div class="image-section">
+        <img src="./assets/shirt_temp.jpg" />
+      </div>
+      <div class="product-title">
+        <div class="product-name">{{product.name}} - &#8377;{{product.price}}</div>
+        <div class="add-to-cart"><a href="javascript:void" (click)="addProductToCart(product)">Add to cart</a></div>
+      </div>
+    </div>
+  </div>
+
+  
+
+</div>

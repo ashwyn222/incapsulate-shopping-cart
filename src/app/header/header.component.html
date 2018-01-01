@@ -1,0 +1,21 @@
+<div class="header">
+  <div style="padding-right:20px">
+    <span>Cart Items:</span>
+    <span>{{cartData.length}}</span>
+    <a href="javascript:void(0)" (click)="toggleCart()">&#x25BE;</a>
+  </div>
+
+  <div class="cart" *ngIf="cartOpened">
+    <div *ngFor="let c of cartData">
+      <div>
+        <img src="./assets/shirt_temp.jpg" />
+      </div>
+      <div>{{c.name}}</div>
+      <div>-</div>
+      <div>&#8377;{{c.price}}</div>
+      <div class="cart-control">
+        <a (click)="removeProductFromCart(c)">&times;</a>
+      </div>
+    </div>
+  </div>
+</div>
