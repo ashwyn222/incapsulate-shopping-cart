@@ -7,7 +7,7 @@ import { Product } from "./product-list/product/products-obj";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  cartData:any;
+  public cartData:any;
 
   ngOnInit() {
     this.cartData = [{

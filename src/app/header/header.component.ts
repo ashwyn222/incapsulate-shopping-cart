@@ -6,7 +6,7 @@ import { Product } from "../product-list/product/products-obj";
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  inputs: ['parentData']
+  inputs: ['cartData']
 })
 export class HeaderComponent implements OnInit {
   cartData:any;
