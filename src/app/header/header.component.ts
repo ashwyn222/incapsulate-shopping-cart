@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.cartOpened = false;
+    console.log("cartData", this.cartData);
   }
 
   toggleCart():void{

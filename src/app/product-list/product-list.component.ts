@@ -12,7 +12,7 @@ import { HostListener } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
   @Output()
-  public productAddedEvent = new EventEmitter<string>();
+  public productAddedEvent = new EventEmitter<any>();
   productData:any;
 
   constructor(private _productsService:ProductsService) { }
@@ -24,7 +24,7 @@ export class ProductListComponent implements OnInit {
 
   addProductToCart(product:any):void{
     this.productAddedEvent.emit(product);
-    //console.log(product);
+    console.log(product);
   }
 
   onScroll($event: Event): void {

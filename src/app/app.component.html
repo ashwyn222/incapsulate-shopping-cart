@@ -1,4 +1,4 @@
 <div>
     <app-header [cartData]="cartData"></app-header>
-    <app-product-list (productAddedEvent)="cartData=$event"></app-product-list>
+    <app-product-list (productAddedEvent)="cartData.push($event)"></app-product-list>
 </div>
