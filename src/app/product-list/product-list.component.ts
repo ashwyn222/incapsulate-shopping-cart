@@ -23,7 +23,7 @@ export class ProductListComponent implements OnInit {
       from:1,
       to:20,
       total:1000,
-      size:10,
+      size:12,
       currentPage:1
     };
 
