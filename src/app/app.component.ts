@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from "./product-list/product/products-obj";
+import { Product } from "./product-list/products-obj";
 
 @Component({
   selector: 'app-root',
@@ -10,35 +10,30 @@ export class AppComponent {
   public cartData:Product[];
 
   ngOnInit() {
-    // this.cartData = [{
-    //   name:"Shirt 1",
-    //   price:19,
-    //   imageUrl:"abc/vfd.xml"
-    // },{
-    //   name:"Shirt 2",
-    //   price:20,
-    //   imageUrl:"abc/vfd.xml"
-    // },{
-    //   name:"Shirt 3",
-    //   price:21,
-    //   imageUrl:"abc/vfd.xml"
-    // },{
-    //   name:"Shirt 4",
-    //   price:22,
-    //   imageUrl:"abc/vfd.xml"
-    // },{
-    //   name:"Shirt 5",
-    //   price:23,
-    //   imageUrl:"abc/vfd.xml"
-    // },{
-    //   name:"Shirt 6",
-    //   price:24,
-    //   imageUrl:"abc/vfd.xml"
-    // }]
     this.cartData = [];
   }
 
-  onAddProductChanged(product:any):void{
-    console.log(product);
+  updateCart(product:Product){
+    var cd = this.cartData;
+    
+    if(cd.length == 0){
+      cd.push(product);
+    } else {
+      var duplicateProduct = this.checkDuplicateProduct(cd, product);
+      
+      if(!duplicateProduct){
+        cd.push(product);
+      }
+    }
+  }
+
+  private checkDuplicateProduct(cd, p):boolean {
+    var duplicate = false;
+    cd.forEach(function(element){
+      if(element._id === p._id){
+        duplicate = true;
+      }
+    });
+    return duplicate;
   }
 }

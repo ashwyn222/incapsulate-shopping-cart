@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CachedResourceLoader } from '@angular/platform-browser-dynamic/src/resource_loader/resource_loader_cache';
-import { Product } from "../product-list/product/products-obj";
+import { Product } from "../product-list/products-obj";
 
 @Component({
   selector: 'app-header',
@@ -16,7 +16,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.cartOpened = false;
-    console.log("cartData", this.cartData);
   }
 
   toggleCart():void{
@@ -26,9 +25,4 @@ export class HeaderComponent implements OnInit {
   removeProductFromCart(product):void{
     this.cartData = this.cartData.filter(item => item !== product);
   }
-
-  addProductToCart(product):void{
-    
-  }
-
 }

@@ -1,7 +1,7 @@
 div.header{text-align:right;background-color:blue;color:white;padding:10px;position:fixed;top:0;width:100%}
 h1{margin:0}
 .header div a{color:white;text-decoration:none}
-.cart{background-color:#EEE;width:200px;height:auto;max-height:250px;overflow:auto;border-top:0;position:absolute;top:40px;right:20px;text-align:left}
+.cart{background-color:#EEE;width:220px;height:auto;max-height:250px;overflow:auto;border-top:0;position:absolute;top:40px;right:20px;text-align:left}
 .cart > div{padding:2px;border-bottom:1px solid #999}
 .cart > div > div{display:inline-block;color:black;vertical-align:middle;font-size:13px;margin-left:5px}
 .cart > div:last-child{border-bottom:0}

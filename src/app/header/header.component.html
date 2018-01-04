@@ -1,9 +1,12 @@
 <div class="header">
-  <div style="padding-right:20px">
+  <div style="padding-right:20px" *ngIf="cartData.length>0; else elseBlock">
     <span>Cart Items:</span>
     <span>{{cartData.length}}</span>
     <a href="javascript:void(0)" (click)="toggleCart()">&#x25BE;</a>
   </div>
+  <ng-template #elseBlock>
+      <span>Empty Cart</span>
+  </ng-template>
 
   <div class="cart" *ngIf="cartOpened">
     <div *ngFor="let c of cartData">
